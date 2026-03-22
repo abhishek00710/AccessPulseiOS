@@ -17,7 +17,7 @@ AccessPulse iOS is an open-source accessibility audit and remediation toolkit fo
 - `AccessPulseCore`: shared models, scoring, and report formatting
 - `AccessPulseExamples`: before/after sample screens for contributor reference
 - `accesspulse`: CLI for local checks and GitHub Actions integration
-- `Examples/AccessPulseDemoApp`: sample app scaffold for GitHub contributors
+- `Examples/AccessPulseDemo`: sample demo app for contributors and adopters
 - `.github/`: issue templates, PR template, and CI workflow
 
 ## Why this project matters
@@ -47,6 +47,20 @@ cd AccessPulseiOS
 swift test
 swift run accesspulse audit --path Sources --format markdown
 ```
+
+## Start with the demo app
+
+If you want the fastest way to understand how AccessPulse fits into a real app, start with the demo app in the public repository:
+
+- Demo app reference: [AccessPulseDemo on GitHub](https://github.com/abhishek00710/AccessPulseiOS/tree/main/Examples/AccessPulseDemo)
+
+This is the best first stop for contributors because it shows:
+
+- how `AccessPulseUI` components are used in SwiftUI screens
+- how accessible patterns look in a simple app structure
+- how teams might adopt the toolkit in a production-style iOS project
+
+If you are planning to contribute new components, rules, or docs, use the demo app first to get a practical feel for how someone would integrate AccessPulse into their own app.
 
 ## Example CLI output
 
@@ -102,7 +116,7 @@ The repository includes:
 - a CI workflow in [`.github/workflows/ci.yml`](.github/workflows/ci.yml)
 - a local composite action in [`.github/actions/accesspulse-audit/action.yml`](.github/actions/accesspulse-audit/action.yml)
 - issue templates for bug reports, new rules, and component requests
-- a sample app scaffold in [`Examples/AccessPulseDemoApp`](Examples/AccessPulseDemoApp)
+- a demo app in [`Examples/AccessPulseDemo`](Examples/AccessPulseDemo)
 
 ## Roadmap
 
@@ -113,4 +127,4 @@ The repository includes:
 
 ## Contributing
 
-Contributions are welcome, especially around new rule packs, better heuristics, sample screens, and CI reporting. Start with [CONTRIBUTING.md](CONTRIBUTING.md).
+Contributions are welcome, especially around new rule packs, better heuristics, sample screens, and CI reporting. A good first step is to open the demo app and see how AccessPulse components would be used in a real project, then continue with [CONTRIBUTING.md](CONTRIBUTING.md).
