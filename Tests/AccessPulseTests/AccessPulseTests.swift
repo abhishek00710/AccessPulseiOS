@@ -54,6 +54,54 @@ func placeholderOnlyTextFieldRuleUsesSwiftSyntax() async throws {
 }
 
 @Test
+func dynamicTypeClampRuleFindsRestrictedScaling() async throws {
+    let source = """
+    import SwiftUI
+
+    struct ContentView: View {
+        var body: some View {
+            Text("Checkout")
+                .dynamicTypeSize(.small ... .large)
+        }
+    }
+    """
+
+    let context = AuditContext(
+        sourceRoot: "/tmp",
+        moduleName: "Demo",
+        files: [SourceFile(path: "/tmp/ContentView.swift", content: source)]
+    )
+
+    let findings = await DynamicTypeClampRule().audit(in: context)
+    #expect(findings.count == 1)
+    #expect(findings.first?.ruleID == "dynamic_type_clamp_risk")
+}
+
+@Test
+func hiddenInteractiveRuleFlagsAccessibilityHiddenButtons() async throws {
+    let source = """
+    import SwiftUI
+
+    struct ContentView: View {
+        var body: some View {
+            Button("Delete") {}
+                .accessibilityHidden(true)
+        }
+    }
+    """
+
+    let context = AuditContext(
+        sourceRoot: "/tmp",
+        moduleName: "Demo",
+        files: [SourceFile(path: "/tmp/ContentView.swift", content: source)]
+    )
+
+    let findings = await AccessibilityHiddenInteractiveRule().audit(in: context)
+    #expect(findings.count == 1)
+    #expect(findings.first?.severity == .error)
+}
+
+@Test
 func engineBuildsScorecardAcrossRules() async throws {
     let source = """
     import SwiftUI

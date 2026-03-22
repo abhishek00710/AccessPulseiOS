@@ -14,6 +14,8 @@ public struct RuleSet: Sendable {
             MissingAccessibilityLabelRule(),
             TouchTargetRule(),
             FixedFontDynamicTypeRule(),
+            DynamicTypeClampRule(),
+            AccessibilityHiddenInteractiveRule(),
             PlaceholderOnlyTextFieldRule()
         ]
     )

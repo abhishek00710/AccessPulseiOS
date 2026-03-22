@@ -27,19 +27,8 @@ public struct AccessibleButton<Label: View>: View {
                 .padding(.vertical, 14)
         }
         .buttonStyle(.borderedProminent)
-        .contentShape(Rectangle())
+        .minimumAccessibleTapArea()
         .accessibilityLabel(accessibilityLabel)
-        .applyHint(accessibilityHint)
-    }
-}
-
-private extension View {
-    @ViewBuilder
-    func applyHint(_ hint: LocalizedStringKey?) -> some View {
-        if let hint {
-            accessibilityHint(hint)
-        } else {
-            self
-        }
+        .accessibilityHintIfPresent(accessibilityHint)
     }
 }

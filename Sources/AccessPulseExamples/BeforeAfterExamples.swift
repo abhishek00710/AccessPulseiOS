@@ -3,6 +3,8 @@ import SwiftUI
 
 public struct BeforeAfterExamples: View {
     @State private var email = ""
+    @State private var password = ""
+    @State private var isVoiceOverHintsEnabled = true
 
     public init() {}
 
@@ -29,11 +31,30 @@ public struct BeforeAfterExamples: View {
                     .font(.title2.bold())
 
                 VStack(spacing: 16) {
+                    AccessibleStatusBanner(
+                        title: "Accessibility upgrade",
+                        message: "This version uses labeled fields, larger touch targets, and VoiceOver-friendly actions.",
+                        tone: .success
+                    )
+
                     AccessibleFormField(
                         title: "Email",
                         text: $email,
                         prompt: "name@example.com",
                         accessibilityHint: "Used for receipts and order updates"
+                    )
+
+                    AccessibleSecureField(
+                        title: "Password",
+                        text: $password,
+                        prompt: "Enter your password",
+                        accessibilityHint: "Must be at least 8 characters"
+                    )
+
+                    AccessibleToggleRow(
+                        title: "VoiceOver hints",
+                        description: "Keep extra spoken guidance enabled during checkout.",
+                        isOn: $isVoiceOverHintsEnabled
                     )
 
                     AccessibleButton(

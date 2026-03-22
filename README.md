@@ -38,6 +38,8 @@ AccessPulse iOS is an open-source accessibility audit and remediation toolkit fo
 - Missing accessibility labels in common SwiftUI patterns
 - Touch targets that appear smaller than 44x44 points
 - Risky fixed-size fonts that often break dynamic type expectations
+- Dynamic Type clamping that can block accessibility text sizes
+- Interactive controls that are hidden from assistive technologies
 - SwiftSyntax-based detection for placeholder-only `TextField` controls
 
 ## Quick start
@@ -85,14 +87,35 @@ import SwiftUI
 
 struct CheckoutView: View {
     @State private var email = ""
+    @State private var password = ""
+    @State private var wantsHints = true
 
     var body: some View {
         VStack(spacing: 16) {
+            AccessibleStatusBanner(
+                title: "Checkout accessibility",
+                message: "Labels, large hit areas, and readable text styles are enabled.",
+                tone: .info
+            )
+
             AccessibleFormField(
                 title: "Email address",
                 text: $email,
                 prompt: "name@example.com",
                 accessibilityHint: "Required for sending your receipt"
+            )
+
+            AccessibleSecureField(
+                title: "Password",
+                text: $password,
+                prompt: "Required",
+                accessibilityHint: "Use your account password to continue"
+            )
+
+            AccessibleToggleRow(
+                title: "VoiceOver hints",
+                description: "Keep extra spoken guidance enabled during checkout",
+                isOn: $wantsHints
             )
 
             AccessibleButton(
@@ -128,3 +151,10 @@ The repository includes:
 ## Contributing
 
 Contributions are welcome, especially around new rule packs, better heuristics, sample screens, and CI reporting. A good first step is to open the demo app and see how AccessPulse components would be used in a real project, then continue with [CONTRIBUTING.md](CONTRIBUTING.md).
+
+High-impact contributor paths right now:
+
+- add more accessibility-first SwiftUI and UIKit components to `AccessPulseUI`
+- expand the SwiftSyntax rule pack with AST-aware checks
+- improve report output for pull request comments and CI dashboards
+- add runtime UI-test or snapshot hooks for accessibility verification

@@ -1,6 +1,6 @@
 import SwiftUI
 
-public struct AccessibleFormField: View {
+public struct AccessibleSecureField: View {
     private let title: LocalizedStringKey
     @Binding private var text: String
     private let prompt: LocalizedStringKey
@@ -23,11 +23,11 @@ public struct AccessibleFormField: View {
             Text(title)
                 .font(.headline)
 
-            TextField(title, text: $text, prompt: Text(prompt))
+            SecureField(title, text: $text, prompt: Text(prompt))
                 .textFieldStyle(.roundedBorder)
                 .padding(.vertical, 4)
                 .accessibilityLabel(title)
-                .accessibilityValue(text.isEmpty ? Text("Empty") : Text(verbatim: text))
+                .accessibilityValue(text.isEmpty ? Text("Empty secure text field") : Text("Entered"))
                 .accessibilityHintIfPresent(accessibilityHint)
         }
     }

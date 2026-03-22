@@ -11,6 +11,10 @@ public struct MissingAccessibilityLabelRule: AccessibilityRule {
         var findings: [AccessibilityFinding] = []
 
         for file in context.files {
+            if file.path.contains("/AccessPulseAuditEngine/Rules/") {
+                continue
+            }
+
             let lines = RuleHelpers.lines(for: file.content)
 
             for index in lines.indices {
@@ -19,11 +23,13 @@ public struct MissingAccessibilityLabelRule: AccessibilityRule {
                 let priorLines = lines[max(0, index - 2)...index].joined(separator: "\n")
                 let isDecorativeImage = line.contains("Label(") || line.contains("AccessibleButton(")
                 let isInsideImageOnlyButton = priorLines.contains("Button(action:")
+                let isExplicitlyHiddenDecorativeAsset = nearbyLines.contains(".accessibilityHidden(true)")
 
                 if line.contains("Image(systemName:"),
                    !nearbyLines.contains(".accessibilityLabel("),
                    !isDecorativeImage,
-                   !isInsideImageOnlyButton {
+                   !isInsideImageOnlyButton,
+                   !isExplicitlyHiddenDecorativeAsset {
                     findings.append(makeFinding(filePath: file.path, line: index + 1))
                     continue
                 }
