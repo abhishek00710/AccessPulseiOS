@@ -1,0 +1,33 @@
+{
+  "": {
+    "swift-dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/master.swiftdeps"
+  },
+  "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseCore/AccessibilityModels.swift": {
+    "dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AccessibilityModels.d",
+    "object": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AccessibilityModels.swift.o",
+    "swiftmodule": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AccessibilityModels~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AccessibilityModels.swiftdeps",
+    "diagnostics": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AccessibilityModels.dia"
+  },
+  "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseCore/AccessibilityReportFormatter.swift": {
+    "dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AccessibilityReportFormatter.d",
+    "object": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AccessibilityReportFormatter.swift.o",
+    "swiftmodule": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AccessibilityReportFormatter~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AccessibilityReportFormatter.swiftdeps",
+    "diagnostics": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AccessibilityReportFormatter.dia"
+  },
+  "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseCore/AccessibilityScoring.swift": {
+    "dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AccessibilityScoring.d",
+    "object": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AccessibilityScoring.swift.o",
+    "swiftmodule": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AccessibilityScoring~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AccessibilityScoring.swiftdeps",
+    "diagnostics": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AccessibilityScoring.dia"
+  },
+  "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseCore/AuditRuleTypes.swift": {
+    "dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AuditRuleTypes.d",
+    "object": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AuditRuleTypes.swift.o",
+    "swiftmodule": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AuditRuleTypes~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AuditRuleTypes.swiftdeps",
+    "diagnostics": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/AuditRuleTypes.dia"
+  }
+}

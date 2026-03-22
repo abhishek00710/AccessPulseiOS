@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseTests.build/master.swiftdeps"
+  },
+  "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Tests/AccessPulseTests/AccessPulseTests.swift": {
+    "dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseTests.build/AccessPulseTests.d",
+    "object": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseTests.build/AccessPulseTests.swift.o",
+    "swiftmodule": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseTests.build/AccessPulseTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseTests.build/AccessPulseTests.swiftdeps",
+    "diagnostics": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseTests.build/AccessPulseTests.dia"
+  }
+}

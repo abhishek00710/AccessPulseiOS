@@ -1,0 +1,3 @@
+module AccessPulseAuditEngine {
+    header "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/include/AccessPulseAuditEngine-Swift.h"
+}

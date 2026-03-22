@@ -1,0 +1,3 @@
+module AccessPulseCore {
+    header "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCore.build/include/AccessPulseCore-Swift.h"
+}

@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCLI.build/master.swiftdeps"
+  },
+  "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseCLI/main.swift": {
+    "dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCLI.build/main.d",
+    "object": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCLI.build/main.swift.o",
+    "swiftmodule": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCLI.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCLI.build/main.swiftdeps",
+    "diagnostics": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseCLI.build/main.dia"
+  }
+}

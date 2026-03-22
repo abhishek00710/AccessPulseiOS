@@ -1,0 +1,6 @@
+/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseAuditEngine/AuditEngine.swift
+/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseAuditEngine/RuleHelpers.swift
+/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseAuditEngine/RuleSet.swift
+/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseAuditEngine/Rules/FixedFontDynamicTypeRule.swift
+/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseAuditEngine/Rules/MissingAccessibilityLabelRule.swift
+/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseAuditEngine/Rules/TouchTargetRule.swift

@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/master.swiftdeps"
+  },
+  "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseAuditEngine/AuditEngine.swift": {
+    "dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/AuditEngine.d",
+    "object": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/AuditEngine.swift.o",
+    "swiftmodule": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/AuditEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/AuditEngine.swiftdeps",
+    "diagnostics": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/AuditEngine.dia"
+  },
+  "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseAuditEngine/RuleHelpers.swift": {
+    "dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/RuleHelpers.d",
+    "object": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/RuleHelpers.swift.o",
+    "swiftmodule": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/RuleHelpers~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/RuleHelpers.swiftdeps",
+    "diagnostics": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/RuleHelpers.dia"
+  },
+  "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseAuditEngine/RuleSet.swift": {
+    "dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/RuleSet.d",
+    "object": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/RuleSet.swift.o",
+    "swiftmodule": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/RuleSet~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/RuleSet.swiftdeps",
+    "diagnostics": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/RuleSet.dia"
+  },
+  "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseAuditEngine/Rules/FixedFontDynamicTypeRule.swift": {
+    "dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/FixedFontDynamicTypeRule.d",
+    "object": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/FixedFontDynamicTypeRule.swift.o",
+    "swiftmodule": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/FixedFontDynamicTypeRule~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/FixedFontDynamicTypeRule.swiftdeps",
+    "diagnostics": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/FixedFontDynamicTypeRule.dia"
+  },
+  "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseAuditEngine/Rules/MissingAccessibilityLabelRule.swift": {
+    "dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/MissingAccessibilityLabelRule.d",
+    "object": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/MissingAccessibilityLabelRule.swift.o",
+    "swiftmodule": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/MissingAccessibilityLabelRule~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/MissingAccessibilityLabelRule.swiftdeps",
+    "diagnostics": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/MissingAccessibilityLabelRule.dia"
+  },
+  "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseAuditEngine/Rules/TouchTargetRule.swift": {
+    "dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/TouchTargetRule.d",
+    "object": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/TouchTargetRule.swift.o",
+    "swiftmodule": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/TouchTargetRule~partial.swiftmodule",
+    "swift-dependencies": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/TouchTargetRule.swiftdeps",
+    "diagnostics": "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/.build/arm64-apple-macosx/debug/AccessPulseAuditEngine.build/TouchTargetRule.dia"
+  }
+}
