@@ -25,7 +25,8 @@ final class PlaceholderOnlyTextFieldVisitor: SyntaxVisitor {
             .joined()
             .trimmingCharacters(in: .whitespacesAndNewlines)
 
-        guard title.isEmpty, !hasAccessibilityLabel(near: node) else {
+        guard title.isEmpty,
+              !AccessibilitySyntaxHelpers.hasAncestorModifier(named: "accessibilityLabel", near: node) else {
             return .visitChildren
         }
 
@@ -47,20 +48,5 @@ final class PlaceholderOnlyTextFieldVisitor: SyntaxVisitor {
         )
 
         return .visitChildren
-    }
-
-    private func hasAccessibilityLabel(near node: FunctionCallExprSyntax) -> Bool {
-        var current = node.parent
-        var depth = 0
-
-        while let syntax = current, depth < 6 {
-            if syntax.description.contains(".accessibilityLabel(") {
-                return true
-            }
-            current = syntax.parent
-            depth += 1
-        }
-
-        return false
     }
 }

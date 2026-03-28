@@ -33,12 +33,6 @@ public struct MissingAccessibilityLabelRule: AccessibilityRule {
                     findings.append(makeFinding(filePath: file.path, line: index + 1))
                     continue
                 }
-
-                if line.contains("Button(action:"),
-                   nearbyLines.contains("Image(systemName:"),
-                   !nearbyLines.contains(".accessibilityLabel(") {
-                    findings.append(makeFinding(filePath: file.path, line: index + 1))
-                }
             }
         }
 

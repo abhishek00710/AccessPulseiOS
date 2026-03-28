@@ -1,5 +1,6 @@
 import AccessPulseAuditEngine
 import AccessPulseCore
+import AccessPulseSyntaxRules
 import Testing
 
 @Test
@@ -51,6 +52,82 @@ func placeholderOnlyTextFieldRuleUsesSwiftSyntax() async throws {
 
     #expect(findings.count == 1)
     #expect(findings.first?.ruleID == "placeholder_only_textfield")
+}
+
+@Test
+func placeholderOnlyTextFieldRuleIgnoresCommentedOutModifiers() async throws {
+    let source = #"""
+    import SwiftUI
+
+    struct DemoForm: View {
+        @State private var notes = ""
+
+        var body: some View {
+            TextField("", text: $notes)
+            // .accessibilityLabel("Delivery notes")
+        }
+    }
+    """#
+
+    let context = AuditContext(
+        sourceRoot: "/tmp",
+        moduleName: "Demo",
+        files: [SourceFile(path: "/tmp/DemoForm.swift", content: source)]
+    )
+
+    let findings = await RuleSet.default.rules
+        .first { $0.id == "placeholder_only_textfield" }?
+        .audit(in: context) ?? []
+
+    #expect(findings.count == 1)
+}
+
+@Test
+func iconOnlyButtonRuleUsesSwiftSyntax() async throws {
+    let source = """
+    import SwiftUI
+
+    struct DemoView: View {
+        var body: some View {
+            Button(action: {}) {
+                Image(systemName: "paperplane.fill")
+            }
+        }
+    }
+    """
+
+    let context = AuditContext(
+        sourceRoot: "/tmp",
+        moduleName: "Demo",
+        files: [SourceFile(path: "/tmp/DemoView.swift", content: source)]
+    )
+
+    let findings = await IconOnlyButtonAccessibilityLabelRule().audit(in: context)
+
+    #expect(findings.count == 1)
+    #expect(findings.first?.location.line == 5)
+}
+
+@Test
+func textButtonDoesNotTriggerIconOnlyRule() async throws {
+    let source = """
+    import SwiftUI
+
+    struct DemoView: View {
+        var body: some View {
+            Button("Review order", systemImage: "cart.fill.badge.plus") {}
+        }
+    }
+    """
+
+    let context = AuditContext(
+        sourceRoot: "/tmp",
+        moduleName: "Demo",
+        files: [SourceFile(path: "/tmp/DemoView.swift", content: source)]
+    )
+
+    let findings = await IconOnlyButtonAccessibilityLabelRule().audit(in: context)
+    #expect(findings.isEmpty)
 }
 
 @Test

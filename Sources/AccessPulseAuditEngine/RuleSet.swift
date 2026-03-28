@@ -12,6 +12,7 @@ public struct RuleSet: Sendable {
     public static let `default` = RuleSet(
         rules: [
             MissingAccessibilityLabelRule(),
+            IconOnlyButtonAccessibilityLabelRule(),
             TouchTargetRule(),
             FixedFontDynamicTypeRule(),
             DynamicTypeClampRule(),
