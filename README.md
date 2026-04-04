@@ -49,6 +49,7 @@ cd AccessPulseiOS
 swift test
 swift run accesspulse audit --path Sources --format markdown
 swift run accesspulse audit --path Sources --format sarif > accesspulse.sarif
+swift run accesspulse audit --path Sources --exclude AccessPulseExamples --format markdown
 ```
 
 ## Start with the demo app

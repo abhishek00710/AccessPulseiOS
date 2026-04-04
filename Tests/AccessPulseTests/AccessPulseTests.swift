@@ -284,3 +284,14 @@ func sarifFormatterProducesCodeScanningShape() throws {
     #expect(firstResult["ruleId"] as? String == "small_touch_target")
     #expect(firstResult["level"] as? String == "warning")
 }
+
+@Test
+func cliUsageMentionsExcludeSupport() async throws {
+    let source = try String(
+        contentsOfFile: "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseCLI/main.swift",
+        encoding: .utf8
+    )
+
+    #expect(source.contains("[--exclude <path> ...]"))
+    #expect(source.contains("let excludedPaths = values(after: \"--exclude\", in: arguments)"))
+}

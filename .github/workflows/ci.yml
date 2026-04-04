@@ -29,12 +29,12 @@ jobs:
       - name: Generate markdown accessibility report
         id: audit_markdown
         continue-on-error: true
-        run: swift run accesspulse audit --path Sources --format markdown > accesspulse-report.md
+        run: swift run accesspulse audit --path Sources --exclude AccessPulseExamples --format markdown > accesspulse-report.md
 
       - name: Generate SARIF accessibility report
         id: audit_sarif
         continue-on-error: true
-        run: swift run accesspulse audit --path Sources --format sarif > accesspulse.sarif
+        run: swift run accesspulse audit --path Sources --exclude AccessPulseExamples --format sarif > accesspulse.sarif
 
       - name: Upload markdown report artifact
         if: always()

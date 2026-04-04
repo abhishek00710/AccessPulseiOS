@@ -12,6 +12,12 @@ For code-scanning friendly output:
 swift run accesspulse audit --path Sources --format sarif > accesspulse.sarif
 ```
 
+To keep intentional demo violations out of CI:
+
+```bash
+swift run accesspulse audit --path Sources --exclude AccessPulseExamples --format markdown
+```
+
 ## Pull request usage
 
 The repository includes a GitHub Actions workflow that:
@@ -35,8 +41,8 @@ It runs:
 
 ```bash
 swift test
-swift run accesspulse audit --path Sources --format markdown
-swift run accesspulse audit --path Sources --format sarif
+swift run accesspulse audit --path Sources --exclude AccessPulseExamples --format markdown
+swift run accesspulse audit --path Sources --exclude AccessPulseExamples --format sarif
 ```
 
 The SARIF file is then uploaded using GitHub's `upload-sarif` action so findings can appear in the repository's Security or Code Scanning UI.
