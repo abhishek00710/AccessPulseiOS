@@ -287,10 +287,16 @@ func sarifFormatterProducesCodeScanningShape() throws {
 
 @Test
 func cliUsageMentionsExcludeSupport() async throws {
-    let source = try String(
-        contentsOfFile: "/Users/abhishekgangdeb/Documents/GIT/AccessPulseiOS/Sources/AccessPulseCLI/main.swift",
-        encoding: .utf8
-    )
+    let repoRoot = URL(fileURLWithPath: #filePath)
+        .deletingLastPathComponent()
+        .deletingLastPathComponent()
+        .deletingLastPathComponent()
+    let cliFile = repoRoot
+        .appending(path: "Sources")
+        .appending(path: "AccessPulseCLI")
+        .appending(path: "main.swift")
+
+    let source = try String(contentsOf: cliFile, encoding: .utf8)
 
     #expect(source.contains("[--exclude <path> ...]"))
     #expect(source.contains("let excludedPaths = values(after: \"--exclude\", in: arguments)"))
