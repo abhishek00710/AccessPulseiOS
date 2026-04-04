@@ -31,7 +31,7 @@ AccessPulse iOS is an open-source accessibility audit and remediation toolkit fo
 - Actor-based audit engine serializes shared report assembly while running rules concurrently with structured concurrency.
 - Plugin-style rules let contributors ship new audits without modifying the engine.
 - Scorecards convert findings into a module-level health snapshot that teams can track over time.
-- The CLI emits markdown or JSON for CI comments, artifacts, and dashboards.
+- The CLI emits markdown, JSON, or SARIF for CI comments, artifacts, dashboards, and code scanning.
 
 ## Current rule coverage
 
@@ -48,6 +48,7 @@ AccessPulse iOS is an open-source accessibility audit and remediation toolkit fo
 cd AccessPulseiOS
 swift test
 swift run accesspulse audit --path Sources --format markdown
+swift run accesspulse audit --path Sources --format sarif > accesspulse.sarif
 ```
 
 ## Start with the demo app
@@ -137,8 +138,7 @@ struct CheckoutView: View {
 The repository includes:
 
 - a CI workflow in [`.github/workflows/ci.yml`](.github/workflows/ci.yml)
-- a local composite action in [`.github/actions/accesspulse-audit/action.yml`](.github/actions/accesspulse-audit/action.yml)
-- issue templates for bug reports, new rules, and component requests
+- SARIF output for GitHub code scanning
 - a demo app in [`Examples/AccessPulseDemo`](Examples/AccessPulseDemo)
 
 ## Roadmap

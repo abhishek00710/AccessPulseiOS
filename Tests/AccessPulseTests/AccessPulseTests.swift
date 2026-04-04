@@ -1,6 +1,7 @@
 import AccessPulseAuditEngine
 import AccessPulseCore
 import AccessPulseSyntaxRules
+import Foundation
 import Testing
 
 @Test
@@ -239,4 +240,47 @@ func customRuleCanBeRegistered() async throws {
 
     let report = await AuditEngine(ruleSet: ruleSet).run(on: context)
     #expect(report.findings.contains(where: { $0.ruleID == "custom_rule" }))
+}
+
+@Test
+func sarifFormatterProducesCodeScanningShape() throws {
+    let report = AccessibilityReport(
+        findings: [
+            AccessibilityFinding(
+                ruleID: "small_touch_target",
+                summary: "Touch target may be smaller than 44x44 points",
+                detail: "Small interactive targets can be hard to activate for many users.",
+                severity: .warning,
+                remediation: "Increase the tappable area to at least 44x44 points.",
+                location: AccessibilityLocation(
+                    filePath: "/tmp/CheckoutView.swift",
+                    line: 42,
+                    column: 3
+                ),
+                tags: ["touch-target", "swiftui"]
+            )
+        ],
+        scorecard: AccessibilityScorecard(
+            moduleName: "Demo",
+            score: 96,
+            totalChecks: 10,
+            passedChecks: 9,
+            findingCount: 1
+        )
+    )
+
+    let output = try AccessibilityReportFormatter.sarif(report)
+    let data = try #require(output.data(using: .utf8))
+    let json = try JSONSerialization.jsonObject(with: data) as? [String: Any]
+    let runs = try #require(json?["runs"] as? [[String: Any]])
+    let firstRun = try #require(runs.first)
+    let tool = try #require(firstRun["tool"] as? [String: Any])
+    let driver = try #require(tool["driver"] as? [String: Any])
+    let results = try #require(firstRun["results"] as? [[String: Any]])
+    let firstResult = try #require(results.first)
+
+    #expect(json?["version"] as? String == "2.1.0")
+    #expect(driver["name"] as? String == "AccessPulse iOS")
+    #expect(firstResult["ruleId"] as? String == "small_touch_target")
+    #expect(firstResult["level"] as? String == "warning")
 }

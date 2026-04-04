@@ -24,7 +24,7 @@ enum AccessPulseCLI {
     private static var usage: String {
         """
         Usage:
-          accesspulse audit --path <directory> [--format markdown|json]
+          accesspulse audit --path <directory> [--format markdown|json|sarif]
         """
     }
 
@@ -46,6 +46,8 @@ enum AccessPulseCLI {
             switch format {
             case "json":
                 print(try AccessibilityReportFormatter.json(report))
+            case "sarif":
+                print(try AccessibilityReportFormatter.sarif(report))
             default:
                 print(AccessibilityReportFormatter.markdown(report))
             }
